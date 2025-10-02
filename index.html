@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="refresh" content="3"> -->
+
+    <title>Fitness App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <script src="functions.js" defer></script>
+</head>
+
+<body>
+
+    <div id="screen">
+        <div id="screen-header">
+            <div id="speaker"></div>
+        </div>
+
+        <div id="header">
+            <div id="header-title">
+                <h2>MyHealth</h2>
+            </div>
+        </div>
+
+        <!-- Home -->
+        <div id="tab-1">
+            <div id="tab-1-screen-1">
+                <div id="tab-1-header">
+                </div>
+
+                <div id="tab-1-body">
+                    <div class="tab-1-header-nutrition-col-header">
+                        <div class="tab-1-header-divider"></div>
+                        <h3 id="tab-1-header-text">This Week's Workouts</h3>
+                        <div class="tab-1-header-divider"></div>
+                    </div>
+
+                    <div id="tab-1-body-workouts">
+                        <div class="tab-1-header-nutrition-col-header">
+                            <div class="tab-1-body-divider"></div>
+                            <h3 class="tab-1-body-text">Monday</h3>
+                            <div class="tab-1-body-divider"></div>
+                        </div>
+                        <div onclick="openScreen(1,2,7)" class="tab-1-body-workout-rectangle">
+                            <h4 class="tab-1-workout-day">Chest Day</h34>
+                        </div>
+
+                        <div class="tab-1-header-nutrition-col-header">
+                            <div class="tab-1-body-divider"></div>
+                            <h3 class="tab-1-body-text">Tuesday</h3>
+                            <div class="tab-1-body-divider"></div>
+                        </div>
+                        <div onclick="openScreen(1,2,7)" class="tab-1-body-workout-rectangle">
+                            <h4 class="tab-1-workout-day">Leg Day</h4>
+                        </div>
+
+                        <div class="tab-1-header-nutrition-col-header">
+                            <div class="tab-1-body-divider"></div>
+                            <h3 class="tab-1-body-text">Wednesday</h3>
+                            <div class="tab-1-body-divider"></div>
+                        </div>
+                        <div onclick="openScreen(1,2,7)" class="tab-1-body-workout-rectangle">
+                            <h4 class="tab-1-workout-day">Full-Body Day</h4>
+                        </div>
+
+                        <div class="tab-1-header-nutrition-col-header">
+                            <div class="tab-1-body-divider"></div>
+                            <h3 class="tab-1-body-text">Thursday</h3>
+                            <div class="tab-1-body-divider"></div>
+                        </div>
+                        <div onclick="openScreen(1,2,7)" class="tab-1-body-workout-rectangle">
+                            <h4 class="tab-1-workout-day">Arm Day</h4>
+                        </div>
+
+                        <div class="tab-1-header-nutrition-col-header">
+                            <div class="tab-1-body-divider"></div>
+                            <h3 class="tab-1-body-text">Friday</h3>
+                            <div class="tab-1-body-divider"></div>
+                        </div>
+                        <div onclick="openScreen(1,2,7)" class="tab-1-body-workout-rectangle">
+                            <h4 class="tab-1-workout-day">Rest Day</h4>
+                        </div>
+
+                        <div class="tab-1-header-nutrition-col-header">
+                            <div class="tab-1-body-divider"></div>
+                            <h3 class="tab-1-body-text">Saturday</h3>
+                            <div class="tab-1-body-divider"></div>
+                        </div>
+                        <div onclick="openScreen(1,2,7)" class="tab-1-body-workout-rectangle">
+                            <h5 class="tab-1-workout-day">Leg Day</h4>
+                        </div>
+
+                        <div class="tab-1-header-nutrition-col-header">
+                            <div class="tab-1-body-divider"></div>
+                            <h3 class="tab-1-body-text">Sunday</h3>
+                            <div class="tab-1-body-divider"></div>
+                        </div>
+                        <div onclick="openScreen(1,2,7)" class="tab-1-body-workout-rectangle">
+                            <h4 class="tab-1-workout-day">Full-Body Day</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tab-1-footer">
+                    <div id="tab-1-footer-nutrition">
+                        <div id="tab-1-footer-nutrition-col">
+                            <div id="tab-1-footer-nutrition-col-header">
+                                <div class="tab-1-footer-divider"></div>
+                                <h3 id="tab-1-footer-text">Nutrition Goals</h3>
+                                <div class="tab-1-footer-divider"></div>
+                            </div>
+                            <div id="tab-1-footer-goals">
+                                <h3 class="tab-1-footer-subheading">Calories: <span id="homeCal"></span> / 3000</h3>
+                                <h3 class="tab-1-footer-subheading">Protein: <span></span> / 150</h3>
+                                <h3 class="tab-1-footer-subheading">Carbs: <span></span> / 200</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-1-screen-2">
+                <div class="inner-screen-header">
+                    <button class="inner-screen-back-button" onclick="openScreen(1, 1, 7)"
+                        style="padding:7px;transform:rotate(-90deg)">
+                        <img src="./static/icons/arrow.svg" width="25" alt="←">
+                    </button>
+                    <h2>Full-Body Workout</h2>
+                </div> <br><br>
+
+                <div id="tab-1-screen-2-body">
+
+                <table id="overview-tables">
+                    <thead>
+                        <tr>
+                            <th>Exercise</th>
+                            <th>Total Sets</th>
+                            <th>Total Reps</th>
+                            <th> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input onclick="openKeyboard()" onfocusout="closeKeyboard()" value="Chest Press" type="text" class="tab-1-screen-2-reps"></td>
+                            <td><input onclick="openKeyboard()" onfocusout="closeKeyboard()" value="2" type="text" class="tab-1-screen-2-reps"></td>
+                            <td><input onclick="openKeyboard()" onfocusout="closeKeyboard()" value="4-8" type="text" class="tab-1-screen-2-reps"></td>
+                            <td><button class="tab-1-screen-2-remove-button">Remove</button></td>
+                        </tr>
+                        <tr>
+                            <td><input onclick="openKeyboard()" onfocusout="closeKeyboard()" value="Squats" type="text" class="tab-1-screen-2-reps"></td>
+                            <td><input onclick="openKeyboard()" onfocusout="closeKeyboard()" value="1" type="text" class="tab-1-screen-2-reps"></td>
+                            <td>
+                                <input onclick="openKeyboard()" onfocusout="closeKeyboard()" value="3-6" type="text" class="tab-1-screen-2-reps">
+                            </td>
+                            <td><button class="tab-1-screen-2-remove-button">Remove</button></td>
+                          
+                        </tr>
+                        <tr>
+                            <td><input onclick="openKeyboard()" onfocusout="closeKeyboard()" value="Row" type="text" class="tab-1-screen-2-reps"></td>
+                            <td><input onclick="openKeyboard()" onfocusout="closeKeyboard()" value="2" type="text" class="tab-1-screen-2-reps"></td>
+                            <td>
+                                <input onclick="openKeyboard()" onfocusout="closeKeyboard()" value="4-8" type="text" class="tab-1-screen-2-reps">
+                            </td>
+                            <td><button class="tab-1-screen-2-remove-button">Remove</button></td>
+                        </tr>
+                        <tr>
+                            <td><input onclick="openKeyboard()" onfocusout="closeKeyboard()" value="RDLs" type="text" class="tab-1-screen-2-reps"></td>
+                            <td><input onclick="openKeyboard()" onfocusout="closeKeyboard()" value="1" type="text" class="tab-1-screen-2-reps"></td>
+                            <td>
+                                <input onclick="openKeyboard()" onfocusout="closeKeyboard()" value="3-8" type="text" class="tab-1-screen-2-reps">
+                            </td>
+                            <td><button class="tab-1-screen-2-remove-button">Remove</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+                <footer>
+                    <button><strong>Add Exercise</strong></button>
+                    <button onclick="openScreen(1,3,7)"><strong>Workout Info</strong></button>
+                </footer>
+            </div>
+
+
+            
+            <div id="tab-1-screen-3">
+                <br>
+                    <div class="inner-screen-header">
+                        <button class="inner-screen-back-button" onclick="openScreen(1, 2, 7)"
+                            style="padding:7px;transform:rotate(-90deg);">
+                            <img src="./static/icons/arrow.svg" width="25" alt="←">
+                        </button>
+                        <h2> Workout Guides</h2>
+                    </div>  <br><br><br>
+
+                <div id="tab-1-screen-3-body">          
+                       <button type="button" onclick="openScreen(1,4,7)">Full-Body Guide</button>
+                        <button type="button"  onclick="openScreen(1,5,7)">Upper-Body Guide</button>
+                        <button type="button"  onclick="openScreen(1,6,7)">Lower-Body Guide</button>
+                        <button type="button"  onclick="openScreen(1,7,7)">Cardio Guide</button>
+                </div>
+            </div>
+
+
+            <div id="tab-1-screen-4">
+                <br>
+                <div class="inner-screen-header">
+                    <button class="inner-screen-back-button" onclick="openScreen(1, 3, 7)"
+                        style="padding:7px;transform:rotate(-90deg)">
+                        <img src="./static/icons/arrow.svg" width="25" alt="←">
+                    </button>
+                    <h2>Full-Body Info</h2>
+                </div> <br><br>
+                <p>The Full-Body Workout maximizes your time by targeting all major muscle groups in your body.
+                </p>
+                <p>This workout consists of the following exercises:</p>
+                <ul>
+                    <li>Chest Press</li>
+                    <li>Squats</li>
+                    <li>Row</li>
+                    <li>Romanian Deadlift (RDL)</li>
+                </ul>
+                <p>Sets of Chest Presses will work out your core and help to build ab muscles.</p>
+                <p>Sets of Squats will target thigh muscles to build up your lower body strength. Be much to go low to
+                    make the most of this exercise.</p>
+                <p>Rows will work to build arm and chest muscles.</p>
+                <p>Romanian Deadlifts will target the arms and chest but also will assist in building core strength.</p>
+            </div>
+
+            <div id="tab-1-screen-5">
+                <br>
+                <div class="inner-screen-header">
+                    <button class="inner-screen-back-button" onclick="openScreen(1, 3, 7)"
+                        style="padding:7px;transform:rotate(-90deg)">
+                        <img src="./static/icons/arrow.svg" width="25" alt="←">
+                    </button>
+                    <h2>Upper-Body Info</h2>
+                </div> <br><br>
+                <p>The Upper-Body Workout focuses on building bicep, tricep and chest strength and endurance.</p>
+                <br>
+                <p>This workout consists of the following exercises:</p>
+                <ul>
+                    <li>Chest Press</li>
+                    <li>Bicep Curl</li>
+                    <li>Row</li>
+                    <li>Dips</li>
+                </ul>
+                <p>Sets of Chest Presses will work out your core and help to build ab muscles.</p>
+                <p>Sets of bicep curls targets the aforementioned bicep muscles.</p>
+                <p>Rows will work to build arm and chest muscles.</p>
+                <p>Dips will help build your arm and chest muscles. Make sure to dip down as far you can.</p>
+            </div>
+            <div id="tab-1-screen-6">
+                <br>
+                <div class="inner-screen-header">
+                    <button class="inner-screen-back-button" onclick="openScreen(1, 3, 7)"
+                        style="padding:7px;transform:rotate(-90deg)">
+                        <img src="./static/icons/arrow.svg" width="25" alt="←">
+                    </button>
+                    <h2>Lower-Body Info</h2>
+                </div> <br><br>
+                <p>The Lower-Body Workout aims to build thigh, leg and calf strength through a series of diverse
+                    exercises.</p>
+                <p>This workout consists of the following exercises:</p>
+                <ul>
+                    <li>Lunges</li>
+                    <li>Squats</li>
+                    <li>Leg Press</li>
+                    <li>Romanian Deadlift (RDL)</li>
+                </ul>
+                <p>Lunges serve as a great warm up exercise for this workout to help get blood pumping to your lower
+                    body</p>
+                <p>Sets of Squats will target thigh muscles to build up your lower body strength. Be much to go low to
+                    make the most of this exercise.</p>
+                <p>Leg Presses will target your thigher and leg muscle to build a good foundation for lower body
+                    strength</p>
+                <p>Romanian Deadlifts may target the arms and chest but also will assist in building lower body
+                    strength.</p>
+            </div>
+            <div id="tab-1-screen-7">
+                <br>
+                <div class="inner-screen-header">
+                    <button class="inner-screen-back-button" onclick="openScreen(1, 3, 7)"
+                        style="padding:7px;transform:rotate(-90deg)">
+                        <img src="./static/icons/arrow.svg" width="25" alt="←">
+                    </button>
+                    <h2>Cardio Info</h2>
+                </div> <br><br>
+                <p>The Cardio Workout aims to improve your endurance, a core component to any healthy persons workout
+                    routine.</p>
+                <br>
+                <p>This workout consists of the following exercises:</p>
+                <ul>
+                    <li>30-Minute Jog</li>
+                    <li>30-Minute Cycling</li>
+                </ul>
+                <p>Jogging should help you build up anerobic endurance allowing you to build stamina which transfers
+                    over to other workouts.</p>
+                <p>Cycling is another great avenue to build anerobic strength while not being as harsh on the knees as
+                    running.</p>
+            </div>
+
+
+        </div>
+
+        <!-- Workout Evaluator -->
+        <div id="tab-2">
+
+            <div id="tab-2-screen-1">
+                <div class="tab-2-screen-1-header" id="tab-2-screen-1-header">
+                    <h4 style="margin-left:2%">Enter the amount of sets and reps for a muscle done in a week from your routine. This is to ensure greater accuracy in getting your workout routine's efficiency.</h4>
+                </div>
+                <br>
+
+                <div id="tab-2-screen-1-display"></div>
+
+                <br>
+                <div id="tab-2-screen-1-footer">
+                    <button type="button" onclick="handleAddExercise()"><strong>Add Exercise</strong></button>
+                    <button type="button" onclick="handleEvaluateWorkout()"><strong>Evaluate</strong></button>
+                </div>
+            </div>
+
+
+            <div id="tab-2-screen-2">
+                <div class="inner-screen-header">
+                    <button class="inner-screen-back-button" onclick="openScreen(2, 1, 2)"
+                        style="padding:7px;transform:rotate(-90deg)">
+                        <img src="./static/icons/arrow.svg" width="25" alt="←">
+                    </button>
+                    <h2>Evaluation</h2>
+                </div>
+
+
+                <div id="tab-2-screen-2-body">
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Nutrition -->
+        <div id="tab-3">
+            <div id="tab-3-screen-1">
+                <div style="margin-top: -8%;" id="caloriesDate"></div>
+                
+                <script>
+                    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                    const d = new Date();
+                    document.getElementById("caloriesDate").innerHTML = `<h2>Todays Calories </h2> <p style="margin-top:-15px;">${days[d.getDay()]}, ${months[d.getMonth()]} ${d.getDay()}, ${d.getFullYear()}</p>`;
+                 </script>
+                <div id="tab-3-screen-1-header">
+                    <input onclick="openKeyboard()" onfocusout="closeKeyboard()" type="text" id="tab-3-screen-1-listInput1"
+                        placeholder="Food Name">
+                        <span onclick="newElement()" class="tab-3-screen-1-addBtn">Add</span>
+
+                    <br>
+                    <input onclick="openKeyboard()" onfocusout="closeKeyboard()" type="text" id="tab-3-screen-1-listInput2"
+                        placeholder="Carbs">
+                    <input onclick="openKeyboard()" onfocusout="closeKeyboard()" type="text" id="tab-3-screen-1-listInput3"
+                        placeholder="Proteins">
+                    <input onclick="openKeyboard()" onfocusout="closeKeyboard()" type="text" id="tab-3-screen-1-listInput4"
+                        placeholder="Fats">
+                        <span onclick="openScreen(3,2,6)" class="tab-3-screen-1-guide">Nutrition Info</span>
+
+                </div>
+                <div id="list-box">
+                    <ul id="tab-3-screen-1-myUL">
+                        <!-- List of items will appear here -->
+                    </ul>
+                </div>
+               
+                <!-- Move the total calories input outside the ul -->
+                <div id="tab-3-screen-1-footer">
+                    <span>
+                        <input id="carb-total" type="text" value="0 Cals. Carbs" disabled>
+                        <input id="protein-total" type="text" value="0 Cals. Protein " disabled>
+                        <input id="fat-total" type="text" value="0 Cals. Fats" disabled>
+                    </span>
+                    <input id="cal-total" type="text" value="Total : 0 Cals." disabled>
+                </div>
+
+            </div>
+            <div id="tab-3-screen-2">
+                <br>
+                <div class="inner-screen-header">
+                    <button class="inner-screen-back-button" onclick="openScreen(3, 1, 6)"
+                        style="padding:7px;transform:rotate(-90deg);">
+                        <img src="./static/icons/arrow.svg" width="25" alt="←">
+                    </button>
+                    <h2>Nutrition Info</h2>
+                </div>  <br><br><br>
+                       
+                            <button type="button" class="tab-3-screen-2-buttons" onclick="openScreen(3,3,6)">Calorie
+                                        Guide</button>      
+                            <button type="button" class="tab-3-screen-2-buttons" onclick="openScreen(3,4,6)">Fats
+                                        Guide</button>
+                       
+                            <button type="button" class="tab-3-screen-2-buttons" onclick="openScreen(3,5,6)">Protein
+                                        Guide</button>
+                            <button type="button" class="tab-3-screen-2-buttons" onclick="openScreen(3,6,6)">Carbs
+                                        Guide</button>
+                </div>
+
+                <div id="tab-3-screen-3">
+                    <br>
+                    <div class="inner-screen-header">
+                        <button class="inner-screen-back-button" onclick="openScreen(3, 2, 6)"
+                            style="padding:7px;transform:rotate(-90deg)">
+                            <img src="./static/icons/arrow.svg" width="25" alt="←">
+                        </button>
+                        <h2>Calorie Info</h2>
+                    </div> <br><br>
+
+                    <p>The following are some tips to help you in tracking and staying within your calorie limits.
+                    </p>
+                    <p>Calories are units of energy which the body either uses or stores in the body in the form of fat.</p>
+                    <br>
+    
+                    <p>Eating less calories than what your body uses is one of the most effective ways to lose weight.
+                        Eating more calories than what the body uses will allow you to gain weight.</p>
+                    <p>Most foods sold in the United States are force to list out the number of calories they contain on the
+                        packaging. Use this to make the best choice for your health.</p>
+                    <p>Calorie trackers are a great way to get an idea of how many calories you consume daily and whether
+                        you need to increase or decrease intake at any point. Use our own integreated calorie tracker under
+                        the nutrition tab.</p>
+    
+                </div>
+                <div id="tab-3-screen-4">
+                    <br>
+                    <div class="inner-screen-header">
+                        <button class="inner-screen-back-button" onclick="openScreen(3, 2, 6)"
+                            style="padding:7px;transform:rotate(-90deg)">
+                            <img src="./static/icons/arrow.svg" width="25" alt="←">
+                        </button>
+                        <h2>Fats Info</h2>
+                    </div> <br><br>
+                    <p>The following is some info surrounding fats in your food.
+                    </p>
+                    <p>Fats in food are not the same fat that your body stores. Fats in food is actually helpful as they
+                        allow your body to absorb Vitamins A and D.</p>
+                    <p>That being said not all fats found in your foods are beneficial for your body. Saturated and Trans
+                        fats are quite harmful to the body.</p>
+                    <p>However there are plenty of fats that do benefit your body, for example omega-3 fatty acids found in
+                        fish and grains have shown benefits to the body. </p>
+                    <p>Like all foods, fats are best consumed in moderation. Eating too much fat can lead to health
+                        complications down the road. Keep track of fats in your food using trackers such as the one under
+                        the nutrition tab.</p>
+                </div>
+    
+                <div id="tab-3-screen-5">
+                    <br>
+                    <div class="inner-screen-header">
+                        <button class="inner-screen-back-button" onclick="openScreen(3, 2, 6)"
+                            style="padding:7px;transform:rotate(-90deg)">
+                            <img src="./static/icons/arrow.svg" width="25" alt="←">
+                        </button>
+                        <h2>Protein Info</h2>
+                    </div> <br><br>
+                    <p>The following is some info surrounding proteins in your food.
+                    </p>
+                    <p>Proteins are crucial components in any balanced diet as they are core components used in creating
+                        muscle in the body.</p>
+    
+                    <p>Proteins are typically found in meats and in other foods such as beans and nuts. </p>
+                    <p>Proteins will work to repair damaged muscles after workouts. This build the muscles back stronger and
+                        leads in an increase in strength and endurance in the long run.</p>
+                    <p>While a great part of a balanced diet, proteins should not be over consumed. To ensure you do not do
+                        so, use a food tracker app such as the one under the nutrition tab in this app.</p>
+                </div>
+            <div id="tab-3-screen-6">
+                <br>
+                <div class="inner-screen-header">
+                    <button class="inner-screen-back-button" onclick="openScreen(3, 2, 6)"
+                        style="padding:7px;transform:rotate(-90deg)">
+                        <img src="./static/icons/arrow.svg" width="25" alt="←">
+                    </button>
+                    <h2>Carbs Info</h2>
+                </div> <br><br>
+                <p>The following is some info surrounding Carbohydrates in your food.
+                </p>
+                <p>Carbohydrates or Carbs are one of the body's main sources of energy that it gets from foods. </p>
+
+                <p>Carbohydrates are typically found in breads and pasta and are great options in a diet where you tend
+                    to burn a lot of calories in a given day.</p>
+                <p>However in diets where you tend to not be very active, an excess of carbs can lead to issues such
+                    high blood sugar or cardiovascular issues. </p>
+                <p>To ensure that you are not over indulging in Carbs, keep track of the food you consume with a
+                    tracking app, such as the one in the nutrition tab.</p>
+            </div>
+        </div>
+
+       <!-- Profile -->
+       <div id="tab-4">
+        <div id="tab-4-screen-1">
+            <br>
+            <img id="tab-4-profile-image" src="./static/images/profileDefault.png" alt="profile image">
+            <div id="tab-4-profile-info">
+                <p id="tab-4-info-text">
+                    Name: <span id="profileName"></span><br><br>
+                    Age: <span id="profileAge"></span><br><br>
+                    Height: <span id="profileFeet"></span> ft.,<span id="profileInches"></span> in.<br><br>
+                    Current Weight (lbs): <span id="profileWeight"></span><br><br>
+                    <!--Difference: </span>+5</span></p><br>-->
+                    BMI: <span id="profileBMI"></span><br><br>
+                    Weight Goal (lbs): <span id="profileWeightGoal"></span><br><br>
+            </div>
+            <button type="button" id="tab-4-edit-info" onclick="openScreen(4,2,2)"><strong>Edit
+                    Info</strong></button>
+            <!--<button type="button" id="tab-4-new-weight">Edit Weight</button>-->
+        </div>
+        <div id="tab-4-screen-2">
+            <div class="inner-screen-header">
+                <button class="inner-screen-back-button" onclick="openScreen(4, 1, 2)"
+                    style="padding:7px;transform:rotate(-90deg);">
+                    <img src="./static/icons/arrow.svg" width="25" alt="←">
+                </button>
+                <h2>Edit Info</h2>
+            </div>  <br>
+            <div id="tab-4-screen-2-body">
+                    <table>
+                        <tr>
+                            <td><label for="newName">Name: </label></td>
+                            <td>
+                                <input onclick="openKeyboard()" onfocusout="closeKeyboard()" id="newName" type="text" value="" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="newAge">Age:</label></td>
+                            <td>
+                                <input onclick="openKeyboard()" onfocusout="closeKeyboard()" id="newAge" type="number" max="115" min="1" value="" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="newFeet">Feet:</label></td>
+                            <td>
+                                <input onclick="openKeyboard()" onfocusout="closeKeyboard()" id="newFeet" type="number" value="" min="2" max="7" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="newInches">Inches: </label></td>
+                            <td>
+                                <input onclick="openKeyboard()" onfocusout="closeKeyboard()" id="newInches" type="number" value="" min="0" max="11" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="newWeight">Current Weight:</label></td>
+                            <td>
+                                <input onclick="openKeyboard()" onfocusout="closeKeyboard()" id="newWeight" type="number" value="" min="0" max="999" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="newWeightGoal">Weight Goal: </label></td>
+                            <td>
+                                <input onclick="openKeyboard()" onfocusout="closeKeyboard()" id="newWeightGoal" type="number" value="" min="0" max="999" required>
+                            </td>
+                        </tr>
+                    </table>
+                    <button id="sub" onclick="editInfo()"><strong>Save</strong></button>
+            
+            </div>      
+        
+        </div>
+
+    </div>
+       
+
+        <div id="tab-footer">
+            <!-- Weekly Schedule -->
+            <button style="font-size:9px;" id="tab-icon-1" onclick="openTab(1)">
+                <img src="./static/icons/home.svg" alt="Weekly Schedule">
+                Overview
+            </button>
+
+            <!-- Workout Evaluator -->
+            <button style="font-size:9px;" id="tab-icon-2" onclick="openTab(2)">
+                <img src="./static/icons/gym.svg" alt="Workout Evaluator">Workout Evaluator</button>
+
+
+            <!-- Calorie Tracker -->
+            <button style="font-size:9px;" id="tab-icon-3" onclick="openTab(3)">
+                <img src="./static/icons/apple.svg" alt="Calorie Tracker">
+                Calorie Tracker
+            </button>
+
+
+            <!-- Profile -->
+            <button style="font-size:9px;" id="tab-icon-4" onclick="openTab(4)">
+                <img src="./static/icons/user.svg" alt="Profile">
+                Profile
+            </button>
+        </div>
+
+        <div id="keyboard">
+            <img id="keyboard-img" src="./static/images/keyboard.png" alt="keyboard">
+        </div>
+    </div>
+
+   
+</body>
+
+</html>

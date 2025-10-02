@@ -1,0 +1,1122 @@
+html {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    height: 800px;
+    width: 100%;
+    justify-content: center;
+}
+
+table, th, td {
+    border: 1px solid;
+    font-size: small;
+    padding: 5px
+}
+
+input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    padding: 10px;
+    border: #84A59D solid 1px;
+}
+
+select {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    padding: 10px;
+    border: #84A59D solid 1px;
+}
+
+#header {
+    width: 100%;
+    background-color: lightgrey;
+    margin-bottom: 0px;
+    padding-top: 18px;
+    padding-bottom: 3px;
+
+}
+
+#header-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+#screen-header {
+    display: flex;
+    position: absolute;
+    top: 20px;
+}
+
+#speaker {
+    border-radius: 30px;
+    height: 25px;
+    width: 110px;
+    border: 1px solid black;
+    background-color: black;
+}
+
+#screen {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 850px;
+    width: 468px;
+    justify-content: center;
+    align-items: center;
+    border: 14px solid black;
+    border-radius: 60px;
+    overflow: hidden;
+}
+
+
+.inner-screen-header {
+    margin-left: 5%;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+.inner-screen-header h2 {
+    display: inline;
+    margin-left: .5%;
+    margin-right: 10%;
+}
+
+.inner-screen-back-button {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    font-weight: 900;
+    font-size: 28px;
+    color: white;
+    background-color: rgb(132, 165, 157);
+    cursor: pointer;
+    border: none;
+    margin-right: 15%;
+    border-radius: 5%;
+}
+
+.inner-screen-back-button:hover {
+    background-color:lightgrey;
+}
+
+#keyboard {
+    display: none;
+    position: absolute;
+    bottom: 0px;
+}
+
+#keyboard-img {
+    width: 450px;
+    height: 260px;
+}
+
+button {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #84A59D;
+}
+
+#tab-footer {
+    display: flex;
+    width: 103%;
+    height: 10%;
+    position: absolute;
+    margin-top:170%;
+    z-index: index 10;
+}
+
+.button-container {
+    padding-bottom: 10%;
+    width: 100%;
+}
+
+
+
+
+
+/* Tab 1 Profile Related Content ----------- */
+#tab-1 {
+    display: flex;
+    /* DO NOT EDIT */
+    flex-direction: column;
+    /* DO NOT EDIT */
+    height: 90%;
+    /* DO NOT EDIT */
+    width: 100%;
+    /* DO NOT EDIT */
+}
+
+#tab-1-screen-1 {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    overflow-y: scroll;
+}
+
+#tab-1-header {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+
+#tab-1-body {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6px;
+}
+
+#tab-1-body-image {
+    position: absolute;
+    height: 480px;
+}
+
+
+#tab-1-body-workouts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#tab-1-body-workout-text {
+    margin-bottom: 8px;
+    margin-right: 15px;
+    font-size: 24px;
+    border: none;
+}
+
+#tab-1-header-text {
+    margin: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.tab-1-body-text {
+    margin: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.tab-1-body-workout-rectangle {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4px;
+    align-items: center;
+    height: 70px;
+    width: 315px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    background-color: #84A59D;
+}
+
+.tab-1-body-workout-rectangle:hover {
+    background-color: lightgray;
+}
+
+
+#tab-1-days {
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: auto;
+    font-size: 30px;
+}
+
+.tab-1-workout-day {
+    font-size: 24px;
+}
+
+#tab-1-body-todays-workout {
+    margin-top: 0;
+    text-align: center;
+}
+
+#tab-1-footer {
+    height: 100px;
+    z-index: 0;
+}
+
+#tab-1-footer-nutrition {
+    display: flex;
+    width: 100%;
+    margin-top: 25px;
+}
+
+#tab-1-footer-nutrition-col {
+    display: flex;
+    z-index: 1;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+#tab-1-footer-text {
+    margin: 0;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-size: 22px;
+}
+
+.tab-1-footer-divider {
+    height: 1px;
+    background-color: black;
+    width: 100px;
+}
+
+.tab-1-header-divider {
+    height: 1px;
+    background-color: black;
+    width: 50px;
+}
+
+.tab-1-body-divider {
+    height: 1px;
+    background-color: black;
+    width: 70px;
+}
+
+
+#tab-1-screen-2 table,
+#tab-1-screen-2 th,
+#tab-1-screen-2 td {
+    border: none;
+}
+
+
+.tab-1-header-nutrition-col-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+
+#tab-1-footer-nutrition-col-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.tab-1-footer-subheading {
+    margin-bottom: 16px;
+    font-size: 20px;
+    margin-top: 0;
+}
+
+#tab-1-screen-2 {
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    margin-top: 5%;
+    height: 88%;
+    overflow-y: scroll;
+}
+
+#tab-1-screen-2-header {
+    margin-top: 50px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+}
+
+#tab-1-screen-2-heading {
+    align-self: center;
+    margin-left: 8px;
+}
+
+#overview-tables input {
+    width: 80px;
+    height: 30px;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    margin-left: 10px;
+}
+#overview-tables button {
+    width: 60px;
+    height: 30px;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    margin-left: 10px;
+}
+#tab-1-screen-2  footer {
+    margin-top: auto;
+    display: inline-block;
+    justify-content: space-between;
+    margin-bottom: 9%;
+}
+#tab-1-screen-2 footer button {
+    font-size: 1.3rem;
+    border-radius: 5px;
+    width:43%;
+    margin-left: 5%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+
+#tab-1-screen-3 {
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+#tab-1-screen-3-body button {
+    margin-left: 13%;
+    margin-right: auto;
+    align-self: center;
+    font-size:x-large;
+    font-weight: bold;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4px;
+    align-items: center;
+    height: 70px;
+    width: 315px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10%;
+    background-color: #84A59D;
+}
+
+#tab-1-screen-3-body button:hover {
+    background-color:lightgray
+}
+
+#tab-1-screen-4 {
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+
+#tab-1-screen-5 {
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+#tab-1-screen-6 {
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+#tab-1-screen-7 {
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+
+
+/* ---------------------------------------------- */
+
+/* Tab 2 Workout  Related Content ----------- */
+#tab-2 {
+    display: none;
+    /* DO NOT EDIT */
+    flex-direction: column;
+    /* DO NOT EDIT */
+    height: 90%;
+    /* DO NOT EDIT */
+    width: 100%;
+    /* DO NOT EDIT */
+    overflow: hidden;
+    padding: 10px;
+    padding-top: 16px;
+}
+
+#tab-2-screen-1 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 2px;
+}
+
+#tab-2-screen-1-body {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 500px;
+    width: 100%;
+    border: 1px solid black;
+    
+}
+
+#tab-2-screen-1-display {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    
+}
+#tab-2-screen-1-table {
+    width: 100%;
+    overflow-y: scroll;
+    margin:0px;
+    padding:0px;
+}
+
+#tab-2-screen-1 table,
+#tab-2-screen-1 th,
+#tab-2-screen-1 td {
+    border: none;
+    font-size: small;
+}
+
+#tab-2-screen-1 th {
+    width:100%;
+    font-size:medium;
+    padding-left:0;
+}
+
+#tab-2-screen-1 td {
+    width: 25%;
+    padding: 8px;
+}
+
+
+
+
+
+#tab-2-screen-1-remove-button {
+    width: 80px;
+    height: 40px;
+    
+}
+
+
+
+.tab-2-screen-1-selector {
+    width: 80px;
+    height: 40px;
+
+}
+
+.tab-2-screen-1-sets {
+    width: 80px;
+    height: 40px;
+}
+
+.tab-2-screen-1-reps {
+    width: 80px;
+    height: 40px;
+}
+
+#tab-2-screen-1-footer {
+    display: inline;
+    justify-content:space-between;
+    margin-top: 0%;
+}
+
+#tab-2-screen-1-footer button {
+    display: inline;
+    font-size: 1.35rem;
+    border-radius: 5px;
+    width: 46%;
+    margin-top: 1%;
+    margin-left: 5%;
+    margin-bottom: 20%;
+    margin-left:2%;
+    justify-content: center;
+    padding: 4%;
+    background-color: lightgray;
+}
+
+#tab-2-screen-1-footer button:hover {
+    background-color: #84A59D;
+}
+
+#tab-2-screen-2 {
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+#tab-2-screen-2-analysis {
+    display: flex;
+    flex-direction: column;
+}
+
+
+#tab-2-screen-2-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+#tab-2-screen-2-row {
+    display: flex;
+    border-bottom: 1px solid black;
+}
+
+#tab-2-screen-2-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid black;
+    padding: 4px;
+    margin: 0;
+    width: 130px;
+}
+
+#tab-2-screen-2-col-p {
+    padding: 4px;
+}
+
+
+/*-------------------------------------------*/
+
+
+/* Tab 3 Nutrition Related Content ----------- */
+#tab-3 {
+    display: none;
+    /* DO NOT EDIT */
+    flex-direction: column;
+    /* DO NOT EDIT */
+    height: 90%;
+    /* DO NOT EDIT */
+    width: 100%;
+    /* DO NOT EDIT */
+    padding-top: 16px;
+}
+
+
+
+
+#tab-3 h1 {
+    margin-top: 20%;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    display: inline;
+
+}
+
+
+
+
+
+
+#tab-3-screen-1 {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    height: 90%;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 10px;
+    max-height: 100%;
+
+}
+
+
+/* Include the padding and border in an element's total width and height */
+* {
+    box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+#tab-3-screen-1-myUL {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the list items */
+.tab-3-screen-1-li {
+    position: relative;
+    background-color: #eee;
+    font-size: 14px;
+    padding: 2%;
+    transition: 0.2s;
+    z-index: index 0;;
+
+}
+
+/* Zebra-stripes */
+.tab-3-screen-1-li:nth-child(odd) {
+    background-color: #84a59d65;
+    z-index: index 0;;
+}
+
+
+
+/* Close button */
+.tab-3-screen-1-close {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 6.7% 5%;
+}
+
+.tab-3-screen-1-close:hover {
+    background-color: #F28482;
+    color: white;
+}
+
+#tab-3-screen-1-header {
+    background: rgba(98, 127, 114, 0.4);
+
+    padding: 15px 10px;
+    color: white;
+    text-align: left;
+    border: #84A59D solid 1px;
+}
+
+#tab-3-screen-1-header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#tab-3-screen-1-listInput1 {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 67%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+    border: #84A59D solid 1px;
+}
+
+#tab-3-screen-1-listInput2 {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 22%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+    border: #84A59D solid 1px;
+}
+
+#tab-3-screen-1-listInput3 {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 23%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+    border: #84A59D solid 1px;
+}
+
+#tab-3-screen-1-listInput4 {
+    margin: 0;
+    border: #84A59D solid 1px;
+    width: 22%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+
+
+
+#carb-total {
+    margin: 0;
+    padding: 10px;
+    float: left;
+    font-size: 12px;
+    border: #84A59D solid 1px;
+    border-radius: 0;
+    width: 33.33%;
+    background: #e9e8e8;
+    color: black;
+}
+
+#protein-total {
+    margin: 0;
+    width: 33.33%;
+    padding: 10px;
+    float: left;
+    border: #84A59D solid 1px;
+    border-radius: 0;
+    background: #e9e8e8;
+    font-size: 12px;
+    color: black;
+}
+
+#fat-total {
+    margin: 0;
+    width: 33.33%;
+    padding: 10px;
+    float: left;
+    border: #84A59D solid 1px;
+    border-radius: 0;
+    background: #e9e8e8;
+    font-size: 12px;
+    color: black;
+}
+
+
+#cal-total {
+    margin: 0;
+    padding-left: 5%;
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    padding: 12px 8px 12px 40px;
+    background: #e9e8e8;
+    border: #84A59D solid 1px;
+    font-size: 14px;
+    color: black;
+}
+.tab-3-screen-1-guide {
+    padding: 10px;
+    width: 33%;
+    float: left;
+    background: #e9e8e8;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: #84A59D solid 1px;
+    border-radius: 0;
+    color: black;
+}
+
+.tab-3-screen-1-guide:hover {
+    background: #84A59D;
+}
+
+.tab-3-screen-1-addBtn {
+    padding: 10px;
+    width: 33%;
+    float: left;
+    background: #e9e8e8;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: #84A59D solid 1px;
+    border-radius: 0;
+    color: black;
+}
+
+.tab-3-screen-1-addBtn:hover {
+    background-color: #84A59D;
+}
+#list-box {
+    display:block;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    max-height: 100%;
+}
+
+#tab-3-screen-1-footer {
+    margin-top:3%;
+    margin-bottom: 5%;
+    justify-content: center;
+    text-align: center;
+    position:static;
+}
+
+
+#tab-3-screen-2 {
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+.tab-3-screen-2-buttons {
+    align-self: center;
+    font-size:x-large;
+    font-weight: bold;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4px;
+    align-items: center;
+    height: 70px;
+    width: 315px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10%;
+    background-color: #84A59D;
+}
+
+.tab-3-screen-2-buttons:hover {
+    background-color:lightgray
+}
+
+
+
+#tab-3-screen-3 {
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+#tab-3-screen-4 {
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+#tab-3-screen-5 {
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+#tab-3-screen-6{
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+/* Tab 4 Profile Related Content ----------- */
+
+#tab-4 {
+    display: none;
+    /* DO NOT EDIT */
+    flex-direction: column;
+    /* DO NOT EDIT */
+    height: 90%;
+    /* DO NOT EDIT */
+    width: 100%;
+    /* DO NOT EDIT */
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+
+#tab-4-profile-image {
+    height: 150px;
+    width: 175px;
+    align-self: center;
+
+}
+
+#tab-4-profile-info {
+    height: 50%;
+    width: 90%;
+    align-self: center;
+    margin-top: 8%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8%;
+    border: solid black 2px;
+    border-radius: 2%;
+}
+
+#tab-4-info-text {
+    margin-left: 5%;
+    margin-bottom: 1px;
+    font-size: 1.2rem;
+}
+
+#tab-4-edit-info {
+    font-size: 1.2rem;
+    width: 50%;
+    margin-top: 0%;
+    align-self: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10%;
+    background-color: #84A59D;
+}
+
+#tab-4-edit-info:hover {
+    background-color: lightgray;
+}
+
+#tab-4-new-weight {
+    display: flex;
+    font-size: 1.2rem;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8%;
+    justify-content: center;
+    padding: 2%;
+    width: 75%;
+    align-self: center;
+
+}
+
+#tab-4-screen-1 {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    overflow: hidden;
+    justify-content: center;
+    font-size: 30px;
+}
+
+#tab-4-screen-2 {
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 10px;
+    font-size:x-large;
+}
+
+#sub {
+    display: flex;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    padding: 14px 18px 14px 18px;
+    width: 65%;
+    margin-top: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    background-color: lightgrey;
+    padding: 4%;
+}
+
+#sub:hover {
+    background-color: #84A59D;
+}
+
+#tab-4 input {
+    height: 30px;
+    width: 200px;
+}
+
+#tab-4-screen-2-body td label, #tab-4-screen-2-body td input{
+    font-size: large;
+    height: max-content;
+}
+
+#tab-4-screen-2-body table,
+#tab-4-screen-2-body th,
+#tab-4-screen-2-body td {
+    border: none;
+}
+/* ---------------------------------------------- */
+
+#tab-icon-1 {
+    margin: 0;
+    width: 25%;
+    background: #84A59D;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+
+}
+
+#tab-icon-2 {
+    margin: 0;
+    width: 26%;
+    background: lightgrey;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+
+}
+
+
+#tab-icon-3 {
+    margin: 0;
+    width: 26%;
+    background: lightgrey;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+}
+
+
+#tab-icon-4 {
+    margin: 0;
+    width: 25%;
+    background: lightgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+
+}
+
+.icon-text {
+    margin-top: 4px;
+    margin-bottom: 0;
+}
